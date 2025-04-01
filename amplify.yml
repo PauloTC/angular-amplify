@@ -5,7 +5,8 @@ frontend:
       commands:
         - curl -fsSL https://bun.sh/install | bash
         - export PATH="$HOME/.bun/bin:$PATH"
-        - npm install wrap-ansi-cjs
+        - nvm install 18.19.0
+        - nvm use 18.19.0
         - bun install
         - bun add -g @angular/cli
     build:
