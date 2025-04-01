@@ -5,10 +5,9 @@ frontend:
       commands:
         - nvm install 18.19.0
         - nvm use 18.19.0
-        - npm cache clean --force
-        - rm -rf node_modules package-lock.json # Elimina dependencias previas
-        - npm install --force
-        - npm install -g @angular/cli
+        - npm install -g pnpm # Instala pnpm globalmente
+        - pnpm install --force # Instala las dependencias con pnpm
+        - pnpm add -g @angular/cli # Instala Angular CLI globalmente con pnpm
     build:
       commands:
         - npm run build
