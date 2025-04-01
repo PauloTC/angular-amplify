@@ -16,7 +16,7 @@ frontend:
       commands:
         - pnpm run build # Ejecuta el script de construcción con pnpm
   artifacts:
-    baseDirectory: dist
+    baseDirectory: dist/angular-amplify
     files:
       - "**/*"
   cache:
