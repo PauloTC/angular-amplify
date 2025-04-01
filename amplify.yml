@@ -8,6 +8,7 @@ frontend:
         - npm cache clean --force
         - npm install --force
         - npm install -g @angular/cli
+        - npm install @angular-devkit/build-angular --save-dev
     build:
       commands:
         - npm run build
