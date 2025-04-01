@@ -11,8 +11,10 @@ frontend:
         - export PATH=$PNPM_HOME/bin:$PATH # Agrega el directorio global de pnpm al PATH
         - pnpm setup # Configura el directorio global de binarios
         - export PATH=$(pnpm bin -g):$PATH # Asegura que el directorio global esté en el PATH
+        - echo "PATH después de configurar pnpm: $PATH" # Depuración del PATH
         - pnpm install --force # Instala las dependencias con pnpm
-        - pnpm add -g @angular/cli
+        - pnpm add -g @angular/cli # Instala Angular CLI globalmente con pnpm
+        - echo "pnpm bin -g: $(pnpm bin -g)" # Depuración del directorio global de binarios
     build:
       commands:
         - pnpm run build # Ejecuta el script de construcción con pnpm
