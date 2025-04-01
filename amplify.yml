@@ -5,7 +5,8 @@ frontend:
       commands:
         - nvm install 18.19.0
         - nvm use 18.19.0
-        - npm install
+        - npm cache clean --force
+        - npm install --force
         - npm install -g @angular/cli
     build:
       commands:
