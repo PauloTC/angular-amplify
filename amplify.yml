@@ -1,4 +1,3 @@
-version: 1
 frontend:
   phases:
     preBuild:
@@ -8,7 +7,7 @@ frontend:
         - export SHELL=/bin/bash # Configura manualmente el shell
         - npm install -g pnpm # Instala pnpm globalmente
         - export PNPM_HOME=$HOME/.pnpm # Configura el directorio global de pnpm
-        - export PATH="$PNPM_HOME/bin:$PATH" # Agrega el directorio global de pnpm al PATH
+        - export PATH="$PNPM_HOME:$PATH" # Asegura que el directorio global de pnpm esté en el PATH
         - pnpm setup # Configura el directorio global de binarios
         - export PATH="$(pnpm bin -g):$PATH" # Asegura que el directorio global esté en el PATH
         - pnpm install --force # Instala las dependencias con pnpm
