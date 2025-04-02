@@ -2,12 +2,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 18.19.0
-        - nvm use 18.19.0
-        - export SHELL=/bin/bash # Configura manualmente el shell
-        - npm install # Instala las dependencias con npm
-        - npm install @angular-devkit/build-angular --save-dev --force # Fuerza la instalación de la librería
-        - npm install -g @angular/cli # Instala Angular CLI globalmente con npm
+        - curl -fsSL https://bun.sh/install | bash # Instala bun
+        - export PATH="$HOME/.bun/bin:$PATH" # Agrega bun al PATH
+        - bun install # Instala las dependencias con bun
+        - bun add -g @angular/cli
         # - nvm install 18.19.0
         # - nvm use 18.19.0
         # - export SHELL=/bin/bash # Configura manualmente el shell
@@ -20,7 +18,7 @@ frontend:
         # - pnpm add -g @angular/cli # Instala Angular CLI globalmente con pnpm
     build:
       commands:
-        - npm run build # Ejecuta el script de construcción con pnpm
+        - bun run build # Ejecuta el script de construcción con pnpm
   artifacts:
     baseDirectory: dist/angular-amplify/browser
     files:
