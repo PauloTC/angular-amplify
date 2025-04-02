@@ -19,7 +19,7 @@ frontend:
         # - pnpm add -g @angular/cli # Instala Angular CLI globalmente con pnpm
     build:
       commands:
-        - npm run build --configuration production # Ejecuta el script de construcción con pnpm
+        - npm run build # Ejecuta el script de construcción con pnpm
   artifacts:
     baseDirectory: dist/angular-amplify/browser
     files:
