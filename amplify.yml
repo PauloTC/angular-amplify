@@ -6,8 +6,8 @@ frontend:
         - nvm use 18.19.0
         - export SHELL=/bin/bash # Configura manualmente el shell
         - npm install # Instala las dependencias con npm
+        - npm install @angular-devkit/build-angular --save-dev --force # Fuerza la instalación de la librería
         - npm install -g @angular/cli # Instala Angular CLI globalmente con npm
-        - npm install @angular-devkit/build-angular --save-dev # Fuerza la instalación de la librería
         # - nvm install 18.19.0
         # - nvm use 18.19.0
         # - export SHELL=/bin/bash # Configura manualmente el shell
