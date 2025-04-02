@@ -4,6 +4,7 @@ frontend:
       commands:
         - nvm install 18.19.0 # Instala la versión correcta de Node.js
         - nvm use 18.19.0 # Usa la versión instalada
+        - curl -fsSL https://bun.sh/install | bash # Instala bun
         - export PATH="$HOME/.bun/bin:$PATH" # Agrega bun al PATH
         - bun install # Instala las dependencias con bun
         - bun add -g @angular/cli
