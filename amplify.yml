@@ -10,6 +10,7 @@ frontend:
         - bun add -g @angular/cli
     build:
       commands:
+        - bun run test --watch=false --bail
         - bun run build --configuration production
   artifacts:
     baseDirectory: dist/angular-amplify/browser
